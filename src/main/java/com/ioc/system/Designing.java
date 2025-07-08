@@ -1,8 +1,10 @@
 package com.ioc.system;
 
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
-@Component
+@Component("designing")
+@Primary
 public class Designing implements Task {
 	
 	{
