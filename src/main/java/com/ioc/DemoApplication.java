@@ -4,6 +4,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 
+import com.ioc.system.Integrator;
 import com.ioc.system.Junction;
 
 @SpringBootApplication
@@ -13,6 +14,9 @@ public class DemoApplication {
 		ApplicationContext ac=SpringApplication.run(DemoApplication.class, args);
        Junction junction = (Junction) ac.getBean("junction");
        junction.executeTask();
+       System.out.println("====================================");
+       Integrator integrator = (Integrator) ac.getBean("integrate");
+       integrator.executeAllTasks();
 		
 		/*	
 		System.out.println("Application started successfully!");

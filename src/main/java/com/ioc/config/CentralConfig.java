@@ -5,6 +5,7 @@ import org.springframework.context.annotation.Configuration;
 
 import com.ioc.system.AudioPlayer;
 import com.ioc.system.Function;
+import com.ioc.system.Integrator;
 import com.ioc.system.Junction;
 import com.ioc.system.VideoPlayer;
 
@@ -29,6 +30,11 @@ public class CentralConfig {
 	@Bean("junction")
 	public Junction junction() {
 		return new Junction();
+	}
+	
+	@Bean("integrate")
+	public Integrator integrator() {
+		return new Integrator();
 	}
 	
 }
